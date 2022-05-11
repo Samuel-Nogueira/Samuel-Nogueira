@@ -1,7 +1,7 @@
-- 👋 Oi, I’m @Samuel-Nogueira
-Analyst Business Intelligence
-Data Science Student
-Currently learning Python
+- 👋 HI, I’m @Samuel-Nogueira
+- Analyst Business Intelligence
+- Data Science Student
+- Currently learning Python
 
 
 
