@@ -1,9 +1,4 @@
-<h1 align="center">Olá 👋, sou Samuel-Nogueira</h1>
-<h3 align="center">Um desenvolvedor frontend apaixonado da Índia</h3>
 
-<p align="left"> <img src ="https://komarev.com/ghpvc/?username=samuel-nogueira&label=Profile%20views&color=0e75b6&style=flat" alt="samuel-nogueira" /> </p>
-
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=samuel-nogueira" alt= "samuel-nogueira" /></a> </p>
 
 <h3 align="left">Conecte-se comigo:</h3>
 <p align="left">
