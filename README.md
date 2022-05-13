@@ -10,8 +10,8 @@ lista = []
 technical_summary = {
                       'Name': ['Samuel Nogueira']
                     , 'Age': [Age]
-                    , 'Languages': ['Python and SQL']
-                    , 'Module_Python': ['Pandas, Selenium and pyodbc']
+                    , 'Languages': ['HTML, Python and SQL']
+                    , 'Module_Python': ['Pandas, win32com.client, Selenium and pyodbc']
                     , 'Tools': ['Git']
                     , 'Agile': ['Scrum and Kanban'] 
                     }
