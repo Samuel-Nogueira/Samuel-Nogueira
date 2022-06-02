@@ -4,7 +4,7 @@ from datetime import date
 
 date = date.today()
 birth = 1993
-Age = date.year - 1993
+Age = date.year - birth
 
 lista = []
 technical_summary = {
