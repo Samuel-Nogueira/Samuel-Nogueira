@@ -6,19 +6,19 @@ declare @data_MOVTO smalldatetime
 declare @Corp varchar(max)
 
 
-	/*Neste tipo de Bulk insert n„o funciona com tabela temporaria,
-	se faz necess·rio uma tabela fisica, pois a tabela temporaria perde
-	a classificaÁ„o de entrada do arquivo, sendo asssim, removendo a ordenaÁ„o das
+	/*Neste tipo de Bulk insert n√£o funciona com tabela temporaria,
+	se faz necess√°rio uma tabela fisica, pois a tabela temporaria perde
+	a classifica√ß√£o de entrada do arquivo, sendo asssim, removendo a ordena√ß√£o das
 	linhas do arquivo.
-	… necess·rio criar uma tabela fisÌca para manter a ordem do arquivo de entrada.
-	… importante manter a ordem, para que possamos saber qual linha pertece a cada nota.*/
+	√â necess√°rio criar uma tabela fis√≠ca para manter a ordem do arquivo de entrada.
+	√â importante manter a ordem, para que possamos saber qual linha pertece a cada nota.*/
 	truncate table tb_fatiamento_stg;
-;	bulk insert tb_fatiamento_stg 
-	from 'C:\Users\Administrator\Documents\S1\ArquivoModelo.S1'
+	bulk insert tb_fatiamento_stg 
+	from 'ArquivoModelo.S1'
 	with(codepage = 'ACP');
 	
 ------------------------------------------------------------------------------------------------------------------
-/*Variaveis fixas para formar as colunas de informaÁoes fixas.*/
+/*Variaveis fixas para formar as colunas de informa√ßoes fixas.*/
 set @data_PROC = (
 					select distinct right(left(substring(coluna,CHARINDEX('proc ',coluna,1),len(coluna)),13),8) 
 					from tb_fatiamento_stg
@@ -39,8 +39,8 @@ set @Corp =		(
 
 ------------------------------------------------------------------------------------------------------------------
 
-/*Cria um novo objeto tempor·rio para efeturar os fatiamos com base nas 
-referncias que ser„o criadas a seguir.*/
+/*Cria um novo objeto tempor√°rio para efeturar os fatiamos com base nas 
+referncias que ser√£o criadas a seguir.*/
 if OBJECT_ID('tempdb.dbo.#fatiamento') is not null drop table #fatiamento
 select 
 	 convert(date,@data_PROC )	as data_PROC
@@ -74,7 +74,7 @@ SELECT
 	into #Reff
 
 FROM #fatiamento nolock
-where coluna like '%≈%'
+where coluna like '%√Ö%'
 order by IdCursor;
 
 update a
@@ -130,7 +130,7 @@ fetch next from c_Referencia into @IdCursor,@Referencia
 close c_Referencia
 deallocate c_Referencia;
 
-/*query que gera os dados para inserir na tabela de produÁ„o*/
+/*query que gera os dados para inserir na tabela de produ√ß√£o*/
 select 
 	 a.data_PROC
 	,a.data_MOVTO
@@ -153,7 +153,7 @@ from
 	(
 	select * from #fatiamento 
 	where len(NumeroCartao) = 18 /*sempre que a linha desta coluna conter 18 caracters 
-									quer dizer que È uma linha de com o produto da nota*/
+									quer dizer que √© uma linha de com o produto da nota*/
 
 	)as a
 inner join (
