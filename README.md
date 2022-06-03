@@ -11,7 +11,7 @@ technical_summary = {
                       'Name': ['Samuel Nogueira']
                     , 'Age': [Age]
                     , 'Languages': ['HTML, Python and SQL']
-                    , 'Module_Python': ['Pandas, win32com.client, Selenium and pyodbc']
+                    , 'Module_Python': ['Pandas, 'NumPy',win32com.client, Selenium and pyodbc']
                     , 'Tools': ['Git']
                     , 'Agile': ['Scrum and Kanban'] 
                     }
